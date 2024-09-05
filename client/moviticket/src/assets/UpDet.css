@@ -1,0 +1,40 @@
+.updet-container {
+    padding: 100px;
+  }
+  
+  .image-container {
+    flex: 1;
+    max-width: 300px;
+    margin-right: 20px;
+  }
+  
+  .movie-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details-container {
+    flex: 2;
+  }
+  
+  .details-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .details-container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .trailer-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  
+  .trailer-button i {
+    margin-right: 8px;
+  }
+  

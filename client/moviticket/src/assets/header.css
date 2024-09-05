@@ -1,0 +1,26 @@
+/* Header.css */
+
+.nav-link {
+    color: #f8f9fa; /* Link color */
+    position: relative; /* For positioning the pseudo-element */
+    text-decoration: none; /* Remove default underline */
+  }
+  
+  .nav-link::after {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute; /* Positioning it below the text */
+    left: 0;
+    bottom: -2px; /* Adjust based on font size */
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: red; /* Underline color */
+    transform: scaleX(0); /* Start with zero width */
+    transform-origin: bottom right; /* Animate from right to left */
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
+  
+  .nav-link:hover::after {
+    transform: scaleX(1); /* Expand to full width on hover */
+    transform-origin: bottom left; /* Animate from left to right */
+  }
+  

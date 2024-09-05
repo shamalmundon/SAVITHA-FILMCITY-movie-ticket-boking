@@ -1,0 +1,70 @@
+.coming {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  background: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: black;
+  color: white;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.video-slider {
+  overflow: hidden;
+  padding: 0;
+  background: black;
+  position: relative;
+  height: 20vh;
+  width: 100%;
+}
+
+.video-slider::before,
+.video-slider::after {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.video-slider::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.video-slider::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.video-slider:hover .video-slide-track {
+  animation-play-state: paused;
+}
+
+.video-slide-track {
+  display: flex;
+  animation: 30s slide infinite linear;
+  height: 100%;
+}
+
+.video-frame {
+  width: 300px; /* Thumbnail card width */
+  height: 168px; /* Maintain 16:9 aspect ratio */
+  margin: 0 10px;
+  padding: 5px;
+  object-fit: cover;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+  border: none;
+  background: #000; /* Black background */
+}

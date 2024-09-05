@@ -1,0 +1,63 @@
+/* Apply global styles */
+
+  body {
+    background: #f2f2f2;
+  }
+  
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%); /* Adjusted for seamless effect */
+    }
+  }
+  
+  .logos {
+    overflow: hidden;
+    padding: 0;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+    height: 10vh; 
+    width: 100%; /* Ensure full width */
+  }
+  
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  .logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+  
+  .logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  }
+  
+  .logos:hover .logos-slide {
+    animation-play-state: paused;
+  }
+  
+  .logos-slide {
+    display: inline-block;
+    animation: 30s slide infinite linear; /* Adjust duration as needed */
+    height: 100%;
+    white-space: nowrap;
+  }
+  
+  .logos-slide img {
+    height: 100%;
+    margin: 0 20px; /* Adjust margin for spacing */
+    object-fit: contain;
+    padding: 15px;
+  }
+  
